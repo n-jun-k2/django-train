@@ -1,0 +1,11 @@
+version: "3"
+services:
+  django:
+    build:
+      context: .
+      dockerfile: ./docker/django/Dockerfile
+    tty: true
+    volumes:
+      - ./src:/app
+    ports:
+      - ${PORT}:8080
