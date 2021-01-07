@@ -2,6 +2,15 @@
 
 Practice developing with django.
 
+## How to use
+```bash
+> docker-compose up -d
+> make django-up
+
+# Check the following address in your browser
+http://localhost:10080/...
+```
+
 ## Project structure
 
 ```bash
@@ -73,7 +82,7 @@ mysite/
 
 [runserver reference](https://docs.djangoproject.com/ja/3.0/ref/django-admin/#django-admin-runserver)
 
-default port 8080
+default port 8000
 
 ```bash
 > cd <project directory>
@@ -81,4 +90,14 @@ default port 8080
 
 # Change port number
 > python manage.py runserver 8800
+```
+
+> In this image, set up a django server with the following command in order to set up a server on the local host.
+```bash
+> python manage.py runserver 0.0.0.0:8000
+```
+
+## Confirmation of django
+```
+http://localhost:10080/...
 ```

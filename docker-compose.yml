@@ -8,4 +8,4 @@ services:
     volumes:
       - ./src:/app
     ports:
-      - ${PORT}:8080
+      - 10080:8000
