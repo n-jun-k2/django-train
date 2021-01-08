@@ -15,3 +15,6 @@ django-make-migrate:
 
 django-createsuperuser:
 	@ make django CMD="python manage.py createsuperuser"
+
+django-shell:
+	@ make django CMD="python manage.py shell"
