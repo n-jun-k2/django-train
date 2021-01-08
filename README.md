@@ -101,3 +101,20 @@ default port 8000
 ```
 http://localhost:10080/...
 ```
+
+## Model activation
+
+1. ```<project name>/settings.py``` add the ```<application dir>/app.py``` ```Config``` class to the file.
+    ```python
+    # settings.py
+    INSTALLED_APPS = [
+        '<application name>.apps.<Application Name>Config',
+        'django.contrib.admin',
+        ...
+        'django.contrib.staticfiles',
+    ]
+    ```
+2. Execute the following command
+    ```bash
+    > python manage.py makemigrations <application name>
+    ```
