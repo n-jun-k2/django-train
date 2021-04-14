@@ -1,6 +1,18 @@
 CMD = echo HELLO
-PROJECT = project
 APP = poll
+
+up:
+	@ docker-compose up -d
+	@ make django-migrate
+
+down:
+	@ docker-compose down
+
+clean:
+	@ docker image prune
+	@ docker volume prune
+	@ docker network prune
+
 django:
 	@ docker-compose exec django /bin/bash -c "$(CMD)"
 
