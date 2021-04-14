@@ -2,7 +2,7 @@ CMD = echo HELLO
 PROJECT = project
 APP = poll
 django:
-	@ docker-compose exec django /bin/bash -c "cd $(PROJECT) && $(CMD)"
+	@ docker-compose exec django /bin/bash -c "$(CMD)"
 
 django-up:
 	@ make django CMD="python manage.py runserver 0.0.0.0:8000"
