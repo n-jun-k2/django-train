@@ -11,6 +11,8 @@ django-migrate:
 	@ make django CMD="python manage.py migrate"
 
 django-make-migrate:
+	@ docker-compose rm -s -v db
+	@ docker-compose up -d db
 	@ make django CMD="python manage.py makemigrations $(APP)"
 
 django-createsuperuser:
